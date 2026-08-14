@@ -26,11 +26,22 @@ import AppDemoModal from './components/AppDemoModal.jsx';
 import OnboardingModal from './components/OnboardingModal.jsx';
 import RegisterSiteModal from './components/RegisterSiteModal.jsx';
 
+import DashboardLayout from './components/dashboard/DashboardLayout.jsx';
+
 export default function App() {
+  const [view, setView] = useState('landing'); // 'landing' | 'app'
+  const [activeSubTab, setActiveSubTab] = useState('developers-api'); // default dashboard tab
+
   const [appDemoOpen, setAppDemoOpen] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState('signup');
   const [registerSiteOpen, setRegisterSiteOpen] = useState(false);
+
+  const handleOpenApp = (subTab = 'developers-api') => {
+    setActiveSubTab(subTab);
+    setView('app');
+    window.scrollTo(0, 0);
+  };
 
   const handleOpenAuth = (mode = 'signup') => {
     setAuthMode(mode);
@@ -47,12 +58,22 @@ export default function App() {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
+  if (view === 'app') {
+    return (
+      <DashboardLayout
+        activeSubTab={activeSubTab}
+        setActiveSubTab={setActiveSubTab}
+        onBackToLanding={() => setView('landing')}
+      />
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#07090E] text-[#F3F4F6] selection:bg-[#00F0FF]/30 selection:text-[#00F0FF]">
       
       {/* Navbar */}
       <Navbar 
-        onOpenAppDemo={() => setAppDemoOpen(true)}
+        onOpenAppDemo={() => handleOpenApp('discover')}
         onOpenAuth={handleOpenAuth}
         onOpenRegisterSite={() => setRegisterSiteOpen(true)}
       />
@@ -61,6 +82,7 @@ export default function App() {
       <main>
         <HeroSection 
           onOpenRegisterSite={() => setRegisterSiteOpen(true)}
+          onOpenApp={() => handleOpenApp('discover')}
         />
 
         <TrustBar />
@@ -76,12 +98,12 @@ export default function App() {
         />
 
         <MarketExplorer 
-          onOpenAppDemo={() => setAppDemoOpen(true)}
+          onOpenAppDemo={() => handleOpenApp('discover')}
         />
 
         <RolesSection 
           onOpenRegisterSite={() => setRegisterSiteOpen(true)}
-          onOpenAppDemo={() => setAppDemoOpen(true)}
+          onOpenAppDemo={() => handleOpenApp('terminal')}
           onOpenAuth={handleOpenAuth}
         />
 
@@ -94,7 +116,7 @@ export default function App() {
         />
 
         <MarketSharesSection 
-          onOpenAppDemo={() => setAppDemoOpen(true)}
+          onOpenAppDemo={() => handleOpenApp('terminal')}
         />
 
         <TransparencySection 
@@ -128,7 +150,7 @@ export default function App() {
 
       {/* Footer */}
       <Footer 
-        onOpenAppDemo={() => setAppDemoOpen(true)}
+        onOpenAppDemo={() => handleOpenApp('developers-api')}
         onOpenAuth={handleOpenAuth}
         onOpenRegisterSite={() => setRegisterSiteOpen(true)}
       />
