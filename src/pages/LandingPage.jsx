@@ -140,7 +140,7 @@ export default function LandingPage({ setView, showToast }) {
             Verified <span className="gradient-text glow-text">Human Intelligence</span> Before You Launch.
           </h1>
           <p className="hero-subtitle">
-            Attentra is the largest network of verified human reviewers that helps creators, brands, and developer teams see how real people react, navigate, and make decisions.
+            Digital Attention Exchange is the premier global network of verified human reviewers that helps creators, brands, and developer teams see how real people react, navigate, and make decisions.
           </p>
           <div className="hero-ctas">
             <button className="btn btn-primary btn-lg" onClick={() => setView('client')}>
@@ -325,22 +325,57 @@ export default function LandingPage({ setView, showToast }) {
               <i className="fa-solid fa-rectangle-ad text-rose"></i>
               <h3>Ad Creatives</h3>
               <p className="small muted text-center">Gauge visual appeal before launching display ads.</p>
+                  
+                  {!runningAnalysis && !analysisDone && (
+                    <button className="btn btn-primary" onClick={() => {
+                      setRunningAnalysis(true);
+                      setTimeout(() => {
+                        setRunningAnalysis(false);
+                        setAnalysisDone(true);
+                        showToast('Telemetry Simulated', 'Computed visual gaze map & 92% attention rating.', 'success');
+                      }, 2500);
+                    }}>
+                      Run Simulated Telemetry Audit
+                    </button>
+                  )}
+
+                  {runningAnalysis && (
+                    <div className="simulating-progress">
+                      <div className="spinner"></div>
+                      <span>Simulating 15 developer eye-tracking gaze paths & click maps...</span>
+                    </div>
+                  )}
+
+                  {analysisDone && (
+                    <div className="analysis-result-box">
+                      <div className="result-header">
+                        <span className="badge badge-emerald">92% Attention Score</span>
+                        <span className="badge badge-indigo">1.4s Avg. CTA Discovery</span>
+                      </div>
+                      <p className="small">
+                        <strong>Telemetry Summary:</strong> Primary CTA button receives immediate gaze focus within 400ms. Copy clutter on right column causes 15% drop-off risk.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         </div>
 
-        {/* 8. WHY NOT SURVEYS COMPARISON TABLE */}
-        <div className="card table-card" style={{ marginBottom: '5rem' }}>
-          <div className="card-header-row">
-            <h3>Attentra vs. Legacy Surveys</h3>
-            <span className="badge badge-purple">Methodology comparison</span>
+        {/* COMPARISON MATRIX */}
+        <div className="section-block">
+          <div className="section-header text-center">
+            <h3>Digital Attention Exchange vs. Legacy Surveys</h3>
+            <p className="section-sub">Why telemetry-backed review outputs beat self-reported survey form answers every single time.</p>
           </div>
-          <div className="table-container">
-            <table className="comparison-matrix-table">
+
+          <div className="table-responsive">
+            <table className="comparison-table">
               <thead>
                 <tr>
-                  <th>Friction Metric</th>
-                  <th className="table-highlight-col">Attentra Panel</th>
+                  <th>Feature / Dimension</th>
+                  <th className="table-highlight-col">Digital Attention Exchange Panel</th>
                   <th>Legacy Forms (e.g. SurveyMonkey)</th>
                 </tr>
               </thead>
@@ -597,12 +632,12 @@ export default function LandingPage({ setView, showToast }) {
 
               <div className={`faq-item ${activeFaq === 1 ? 'active' : ''}`}>
                 <button className="faq-trigger" onClick={() => toggleFaq(1)}>
-                  What is the difference between Attentra and traditional user surveys?
+                  What is the difference between Digital Attention Exchange and traditional user surveys?
                   <i className="fa-solid fa-chevron-down"></i>
                 </button>
                 <div className="faq-answer">
                   <p className="small muted">
-                    Traditional surveys rely on checkboxes that users speed through to get paid. Attentra measures actual visual coordinates, click times, and video playback retention, giving you cold telemetry logs of their attention.
+                    Traditional surveys rely on checkboxes that users speed through to get paid. Digital Attention Exchange measures actual visual coordinates, click times, and video playback retention, giving you cold telemetry logs of their attention.
                   </p>
                 </div>
               </div>
@@ -645,43 +680,46 @@ export default function LandingPage({ setView, showToast }) {
       <footer className="landing-footer">
         <div className="footer-grid">
           <div className="footer-col-logo">
-            <div className="navbar-logo">
-              <div className="logo-circle">
-                <i className="fa-solid fa-signature"></i>
+            <div className="navbar-brand-container">
+              <div className="brand-logo-box">
+                <i className="fa-solid fa-bolt-lightning logo-icon"></i>
               </div>
-              Attentra
+              <div className="brand-text-stack">
+                <span className="brand-title">DIGITAL ATTENTION EXCHANGE</span>
+                <span className="brand-signature-line">ATTENTION MARKET & TELEMETRY</span>
+              </div>
             </div>
-            <p className="small muted">
-              The world's largest platform for verified human attention and digital operations feedback.
+            <p className="small muted" style={{ marginTop: '12px' }}>
+              The global marketplace for verified human attention, real-time telemetry metrics, and high-fidelity audit insights.
             </p>
           </div>
           <div className="footer-col-links">
             <h5>Product</h5>
-            <a href="#platform">How it works</a>
-            <a href="#solutions">Solutions</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#attention-index">Attention Index</a>
+            <a href="#for-owners">For Owners</a>
             <a href="#docs">Security Shield</a>
           </div>
           <div className="footer-col-links">
             <h5>Ecosystem</h5>
             <a href="#docs">Developer API</a>
-            <a href="#platform">Reviewer network</a>
-            <a href="#platform">Status updates</a>
-            <a href="#platform">Roadmap</a>
+            <a href="#community">Reviewer Network</a>
+            <a href="#explore">Live Metrics</a>
+            <a href="#blog">Market Insights</a>
           </div>
           <div className="footer-col-links">
             <h5>Legal</h5>
-            <a href="#platform">Terms of Service</a>
-            <a href="#platform">Privacy Policy</a>
-            <a href="#platform">GDPR protection</a>
-            <a href="#platform">SOC2 Audit</a>
+            <a href="#docs">Terms of Service</a>
+            <a href="#docs">Privacy Policy</a>
+            <a href="#docs">GDPR Compliance</a>
+            <a href="#docs">SOC2 Audit</a>
           </div>
         </div>
         <div className="footer-bottom-row">
-          <span className="small muted">&copy; 2026 Attentra Inc. All rights reserved.</span>
+          <span className="small muted">&copy; 2026 Digital Attention Exchange. All rights reserved.</span>
           <div className="footer-status-pill">
             <div className="pulse-emerald"></div>
-            <span>All Systems Operational</span>
+            <span>Exchange Systems Operational</span>
           </div>
         </div>
       </footer>
