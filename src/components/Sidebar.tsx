@@ -1,118 +1,118 @@
-import React, { useState } from 'react';
-import { NAV_ITEMS } from '../types/navigation';
-import type { NavTabId } from '../types/navigation';
-import { IconMapper } from './IconMapper';
+import React from 'react';
+import { 
+  Compass, 
+  TrendingUp, 
+  Activity, 
+  Zap, 
+  Globe, 
+  UserCheck, 
+  Briefcase, 
+  ShieldCheck, 
+  Coins, 
+  FileText, 
+  Code2, 
+  Atom,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles
+} from 'lucide-react';
+import type { TabId } from '../types/navigation';
 
 interface SidebarProps {
-  activeTab: NavTabId;
-  onSelectTab: (tabId: NavTabId) => void;
+  activeTab: TabId;
+  setActiveTab: (tab: TabId) => void;
   collapsed: boolean;
-  onToggleCollapse: () => void;
+  setCollapsed: (collapsed: boolean) => void;
+}
+
+interface NavItem {
+  id: TabId;
+  label: string;
+  icon: React.ReactNode;
+  badge?: string;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
   activeTab,
-  onSelectTab,
+  setActiveTab,
   collapsed,
-  onToggleCollapse,
+  setCollapsed
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const filteredItems = NAV_ITEMS.filter((item) =>
-    item.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const categories = ['Core', 'Network', 'Management', 'Ecosystem'] as const;
+  const navItems: NavItem[] = [
+    { id: 'discover', label: 'Discover', icon: <Compass className="nav-icon" /> },
+    { id: 'terminal', label: 'Terminal', icon: <TrendingUp className="nav-icon" /> },
+    { id: 'wpi', label: 'WPI Explorer', icon: <Activity className="nav-icon" /> },
+    { id: 'mining', label: 'Mining', icon: <Zap className="nav-icon" /> },
+    { id: 'extension', label: 'Extension', icon: <Globe className="nav-icon" /> },
+    { id: 'owner', label: 'Owner Workspace', icon: <UserCheck className="nav-icon" /> },
+    { id: 'indices', label: 'Indices', icon: <Briefcase className="nav-icon" /> },
+    { id: 'validators', label: 'Validators', icon: <ShieldCheck className="nav-icon" /> },
+    { id: 'economy', label: '$SITE Economy', icon: <Coins className="nav-icon" /> },
+    { id: 'governance', label: 'Governance', icon: <FileText className="nav-icon" /> },
+    { id: 'api', label: 'Developers API', icon: <Code2 className="nav-icon" /> },
+    { id: 'antifragility', label: 'Anti-Fragility', icon: <Atom className="nav-icon" /> }
+  ];
 
   return (
-    <aside className={`sidebar-vertical ${collapsed ? 'collapsed' : ''}`}>
+    <aside className={`vertical-sidebar ${collapsed ? 'collapsed' : ''}`}>
       {/* Brand Header */}
       <div className="sidebar-brand">
-        <a href="#discover" className="brand-logo-group" onClick={(e) => { e.preventDefault(); onSelectTab('discover'); }}>
-          <div className="brand-icon-box">
-            <IconMapper name="Atom" size={22} />
+        <div className="brand-logo-container">
+          <div className="brand-icon">
+            <Sparkles className="logo-sparkle" />
           </div>
           {!collapsed && (
             <div className="brand-text">
-              <span className="brand-title">DIGITAL ATTENTION</span>
-              <span className="brand-subtitle">EXCHANGE</span>
+              <span className="brand-title">SITE</span>
+              <span className="brand-subtitle">Attention Exchange</span>
             </div>
           )}
-        </a>
-        <button
-          className="collapse-toggle-btn"
-          onClick={onToggleCollapse}
-          title={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
+        </div>
+        <button 
+          className="collapse-btn" 
+          onClick={() => setCollapsed(!collapsed)}
+          title={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
-          <IconMapper name={collapsed ? 'ChevronRight' : 'ChevronLeft'} size={16} />
+          {collapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
         </button>
       </div>
 
-      {/* Search Filter Bar (Shown when expanded) */}
-      {!collapsed && (
-        <div className="sidebar-search-box">
-          <div className="search-input-wrapper">
-            <IconMapper name="Search" />
-            <input
-              type="text"
-              placeholder="Search features..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="sidebar-search-input"
-            />
-          </div>
-        </div>
-      )}
-
-      {/* Vertical Navigation Items List */}
-      <div className="sidebar-nav-list">
-        {categories.map((category) => {
-          const categoryItems = filteredItems.filter((item) => item.category === category);
-          if (categoryItems.length === 0) return null;
-
-          return (
-            <React.Fragment key={category}>
-              {!collapsed && <div className="nav-category-header">{category}</div>}
-              {categoryItems.map((item) => {
-                const isActive = activeTab === item.id;
-                return (
-                  <button
-                    key={item.id}
-                    className={`nav-item-btn ${isActive ? 'active' : ''}`}
-                    onClick={() => onSelectTab(item.id)}
-                    title={collapsed ? `${item.label} - ${item.description}` : item.description}
-                  >
-                    <IconMapper name={item.iconName} className="nav-icon" />
-                    {!collapsed && (
-                      <>
-                        <span className="nav-label">{item.label}</span>
-                        {item.badge && (
-                          <span className={`nav-badge badge-${item.badgeType || 'info'}`}>
-                            {item.badge}
-                          </span>
-                        )}
-                      </>
-                    )}
-                  </button>
-                );
-              })}
-            </React.Fragment>
-          );
-        })}
+      {/* Navigation List - All 12 Segments intact */}
+      <div className="sidebar-nav-container">
+        <div className="nav-section-label">{!collapsed && 'PROTOCOLS & TOOLS'}</div>
+        <nav className="vertical-nav-list">
+          {navItems.map((item) => {
+            const isActive = activeTab === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => setActiveTab(item.id)}
+                className={`vertical-nav-item ${isActive ? 'active' : ''}`}
+                title={collapsed ? item.label : undefined}
+              >
+                <div className="nav-item-content">
+                  <span className="nav-icon-wrapper">{item.icon}</span>
+                  {!collapsed && <span className="nav-item-label">{item.label}</span>}
+                </div>
+                {isActive && <div className="active-glow-pill" />}
+                {item.badge && !collapsed && <span className="nav-badge">{item.badge}</span>}
+              </button>
+            );
+          })}
+        </nav>
       </div>
 
-      {/* Sidebar Footer User Info */}
+      {/* Sidebar Footer Status */}
       <div className="sidebar-footer">
-        <div className="user-avatar">AI</div>
-        {!collapsed && (
-          <div className="user-info">
-            <span className="user-name">Gyan (Owner)</span>
-            <span className="user-status">
-              <span className="status-dot"></span> Mainnet Online
-            </span>
-          </div>
-        )}
+        <div className="network-status-indicator">
+          <span className="pulse-dot"></span>
+          {!collapsed && (
+            <div className="status-info">
+              <span className="status-title">Mainnet Active</span>
+              <span className="status-gas">Gas: 12 Gwei</span>
+            </div>
+          )}
+        </div>
       </div>
     </aside>
   );
