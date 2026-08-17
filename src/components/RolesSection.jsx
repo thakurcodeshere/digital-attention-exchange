@@ -13,7 +13,7 @@ export default function RolesSection({ onOpenRegisterSite, onOpenAppDemo, onOpen
       tagline: 'Turn attention into participation.',
       desc: 'Engage with participating websites and earn rewards based on verified engagement.',
       benefits: [
-        'Earn $SITE rewards for verified high-depth sessions',
+        'Earn $DAE rewards for verified high-depth sessions',
         'Build a personalized verified Attention Portfolio',
         'Privacy-preserving attestation with zero tracker bloat',
         'Discover high-quality curation feeds across the web'

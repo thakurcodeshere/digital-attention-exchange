@@ -47,7 +47,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'owner', label: 'Owner Workspace', icon: <UserCheck className="nav-icon" /> },
     { id: 'indices', label: 'Indices', icon: <Briefcase className="nav-icon" /> },
     { id: 'validators', label: 'Validators', icon: <ShieldCheck className="nav-icon" /> },
-    { id: 'economy', label: '$SITE Economy', icon: <Coins className="nav-icon" /> },
+    { id: 'economy', label: '$DAE Economy', icon: <Coins className="nav-icon" /> },
     { id: 'governance', label: 'Governance', icon: <FileText className="nav-icon" /> },
     { id: 'api', label: 'Developers API', icon: <Code2 className="nav-icon" /> },
     { id: 'antifragility', label: 'Anti-Fragility', icon: <Atom className="nav-icon" /> }
@@ -58,22 +58,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Brand Header */}
       <div className="sidebar-brand">
         <div className="brand-logo-container">
-          <div className="brand-icon relative overflow-hidden">
-              {/* DAE monogram */}
-              <span className="font-black text-[9px] tracking-tighter font-mono select-none leading-none">
-                <span style={{color:'#00F0FF'}}>D</span>
-                <span style={{color:'rgba(255,255,255,0.4)'}}>·</span>
-                <span style={{color:'#3B82F6'}}>A</span>
-                <span style={{color:'rgba(255,255,255,0.4)'}}>·</span>
-                <span style={{color:'#8B5CF6'}}>E</span>
-              </span>
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] p-[1px] shadow-glowCyan flex items-center justify-center shrink-0">
+            <div className="w-full h-full bg-[#07090E] rounded-[7px] flex items-center justify-center font-mono font-black text-xs text-[#00F0FF]">
+              DAE
             </div>
-            {!collapsed && (
-              <div className="brand-text">
-                <span className="brand-title" style={{fontSize:'11px', letterSpacing:'0.05em'}}>Digital Attention Exchange</span>
-                <span className="brand-subtitle">Where Attention Meets Value</span>
-              </div>
-            )}
+          </div>
+          {!collapsed && (
+            <div className="brand-text">
+              <span className="brand-title">DAE</span>
+              <span className="brand-subtitle">Digital Attention Exchange</span>
+            </div>
+          )}
         </div>
         <button 
           className="collapse-btn" 

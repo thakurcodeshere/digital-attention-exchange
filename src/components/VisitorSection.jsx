@@ -32,7 +32,7 @@ export default function VisitorSection({ onOpenAuth }) {
               <div className="grid grid-cols-3 gap-3 text-center">
                 <div className="bg-white/5 p-3 rounded-xl border border-white/5">
                   <div className="text-[10px] font-mono text-gray-400">ENGAGEMENT</div>
-                  <div className="text-sm font-bold font-mono text-[#00F0FF] mt-1">+12.4 SITE</div>
+                  <div className="text-sm font-bold font-mono text-[#00F0FF] mt-1">+12.4 DAE</div>
                 </div>
                 <div className="bg-white/5 p-3 rounded-xl border border-white/5">
                   <div className="text-[10px] font-mono text-gray-400">STREAK</div>

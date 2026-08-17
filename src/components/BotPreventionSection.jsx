@@ -24,7 +24,7 @@ export default function BotPreventionSection() {
             Attention is valuable only <span className="gradient-text-cyan">when it is real.</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Digital Attention Exchange combines behavioral signals, analytics sources, statistical anomaly detection and community challenges to make artificial engagement economically harder.
+            SITE combines behavioral signals, analytics sources, statistical anomaly detection and community challenges to make artificial engagement economically harder.
           </p>
         </div>
 

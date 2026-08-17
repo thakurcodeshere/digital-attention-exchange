@@ -7,7 +7,7 @@ export default function ProtocolArchSection({ onOpenDocs }) {
     { layer: 'MARKET LAYER', items: 'Site Shares · Attention Indices · Order Book Trading', bg: 'bg-blue-500/10 text-blue-400 border-blue-500/30' },
     { layer: 'VALUATION LAYER', items: 'Attention Index (AI Score) · 5 Anchor Weight Engine', bg: 'bg-purple-500/10 text-purple-400 border-purple-500/30' },
     { layer: 'VERIFICATION LAYER', items: 'Oracles · Statistical Anomaly Detection · Attestation Nodes', bg: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30' },
-    { layer: 'INCENTIVES', items: '$SITE Token · Engagement Rewards · Staking · Slashing', bg: 'bg-amber-500/10 text-amber-400 border-amber-500/30' },
+    { layer: 'INCENTIVES', items: '$DAE Token · Engagement Rewards · Staking · Slashing', bg: 'bg-amber-500/10 text-amber-400 border-amber-500/30' },
     { layer: 'GOVERNANCE LAYER', items: 'Validators · Curators · Parameter Voting · Protocol Security', bg: 'bg-rose-500/10 text-rose-400 border-rose-500/30' }
   ];
 

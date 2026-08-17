@@ -48,7 +48,7 @@ export default function BigIdeaSection({ onOpenMethodology }) {
             <span>THE BIG IDEA</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            How Digital Attention Exchange transforms traffic into <span className="gradient-text-cyan">market data.</span>
+            How SITE transforms traffic into <span className="gradient-text-cyan">market data.</span>
           </h2>
           <p className="text-lg text-gray-300">
             A simple three-step infrastructure powering the global attention market.

@@ -15,7 +15,7 @@ const tabTitles: Record<TabId, { title: string; subtitle: string }> = {
   owner: { title: 'Owner Workspace', subtitle: 'Protocol admin controls, parameter overrides & treasury' },
   indices: { title: 'Indices', subtitle: 'Attention-weighted asset baskets & algorithmic index funds' },
   validators: { title: 'Validators', subtitle: 'Consensus nodes, staking breakdown & slashing protection' },
-  economy: { title: '$SITE Economy', subtitle: 'Tokenomics, burn metrics ($SITE buyback) & staking APY' },
+  economy: { title: '$DAE Economy', subtitle: 'Tokenomics, burn metrics ($DAE buyback) & staking APY' },
   governance: { title: 'Governance', subtitle: 'On-chain DAO proposals, voting power & proposal execution' },
   api: { title: 'Developers API', subtitle: 'REST & WebSocket API telemetry, SDKs & developer webhooks' },
   antifragility: { title: 'Anti-Fragility', subtitle: 'Protocol resilience analytics, stress tests & circuit breakers' }
@@ -47,7 +47,7 @@ export const Header: React.FC<HeaderProps> = ({ activeTab }) => {
 
         {/* Live Network Metric */}
         <div className="network-stat-pill">
-          <span className="stat-label">$SITE:</span>
+          <span className="stat-label">$DAE:</span>
           <span className="stat-val">$4.82</span>
           <span className="stat-change positive">+8.4%</span>
         </div>

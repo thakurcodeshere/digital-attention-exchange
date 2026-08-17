@@ -10,23 +10,19 @@ export default function Footer({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between border-b border-white/10 pb-10 gap-6">
           <div className="space-y-2">
             <div className="flex items-center space-x-3">
-              <div className="relative w-11 h-11 flex-shrink-0">
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#00F0FF] to-[#3B82F6] opacity-60 blur-[5px]" />
-                <div className="relative w-11 h-11 rounded-xl bg-[#07090E] border border-[#00F0FF]/60 flex items-center justify-center overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00F0FF]/10 to-transparent" />
-                  <span className="relative font-black text-[11px] tracking-tighter font-mono select-none">
-                    <span className="text-[#00F0FF]">D</span>
-                    <span className="text-white/40">·</span>
-                    <span className="text-[#3B82F6]">A</span>
-                    <span className="text-white/40">·</span>
-                    <span className="text-[#8B5CF6]">E</span>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] p-[1.5px] shadow-glowCyan shrink-0">
+                <div className="w-full h-full bg-[#07090E] rounded-[9.5px] flex items-center justify-center">
+                  <span className="font-mono font-black text-sm tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] to-[#3B82F6]">
+                    DAE
                   </span>
                 </div>
               </div>
-              <span className="text-xl font-extrabold text-white tracking-wider font-sans">Digital Attention Exchange</span>
+              <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight font-sans">
+                Digital Attention Exchange
+              </span>
             </div>
-            <div className="text-[10px] font-mono tracking-[0.18em] text-[#00F0FF]/80 uppercase mt-1">
-              WHERE ATTENTION MEETS VALUE
+            <div className="text-xs font-mono tracking-widest text-[#00F0FF] uppercase">
+              DECENTRALIZED ATTENTION MARKET & TELEMETRY
             </div>
           </div>
 
@@ -124,7 +120,7 @@ export default function Footer({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }
 
         {/* Bottom Tagline & Copyright */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-gray-500 gap-4">
-          <div>© 2026 Digital Attention Exchange. All rights reserved.</div>
+          <div>© 2026 SITE. All rights reserved.</div>
           <div className="text-[#00F0FF] font-semibold">
             Digital attention is measurable. The market is just beginning.
           </div>

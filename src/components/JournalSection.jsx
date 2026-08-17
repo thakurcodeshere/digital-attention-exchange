@@ -29,7 +29,7 @@ export default function JournalSection() {
       category: 'Data Science',
       readTime: '8 min read',
       date: 'Jul 19, 2026',
-      desc: 'Inside the statistical anomaly detection and behavioral attestation algorithms keeping the SITE market honest.'
+      desc: 'Inside the statistical anomaly detection and behavioral attestation algorithms keeping the Digital Attention Exchange market honest.'
     },
     {
       title: 'The Economics of Digital Attention',

@@ -1,54 +1,43 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, ShieldCheck, Sparkles, Activity, Globe } from 'lucide-react';
 
 export default function Navbar({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#07090E]/95 backdrop-blur-xl">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-[72px] gap-5">
-
-          {/* ── SEGMENT 1: BRAND LOGO + NAME + SIGNATURE ── */}
-          <a href="#" className="flex items-center gap-3 group flex-shrink-0">
-            {/* DAE Monogram Logo */}
-            <div className="relative w-11 h-11 flex-shrink-0">
-              {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#00F0FF] to-[#3B82F6] opacity-80 blur-[6px] group-hover:opacity-100 transition-opacity duration-300" />
-              {/* Inner box */}
-              <div className="relative w-11 h-11 rounded-xl bg-[#07090E] border border-[#00F0FF]/60 flex items-center justify-center group-hover:border-[#00F0FF] transition-all duration-300 overflow-hidden">
-                {/* Diagonal accent line */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#00F0FF]/10 to-transparent" />
-                {/* D·A·E monogram */}
-                <span className="relative font-black text-[11px] tracking-tighter leading-none font-mono text-[#00F0FF] group-hover:text-white transition-colors select-none">
-                  <span className="text-[#00F0FF]">D</span>
-                  <span className="text-white/50">·</span>
-                  <span className="text-[#3B82F6]">A</span>
-                  <span className="text-white/50">·</span>
-                  <span className="text-[#8B5CF6]">E</span>
+    <nav className="sticky top-0 z-50 glass-panel border-b border-white/10 bg-[#07090E]/90 backdrop-blur-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          
+          {/* Logo & Live Ticker Status */}
+          <div className="flex items-center space-x-3 xl:space-x-4 shrink-0">
+            <a href="#" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] p-[1.5px] shadow-glowCyan group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <div className="w-full h-full bg-[#07090E] rounded-[9.5px] flex items-center justify-center">
+                  <span className="font-mono font-black text-sm tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] to-[#3B82F6]">
+                    DAE
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-col shrink-0">
+                <span className="font-extrabold text-lg lg:text-xl tracking-tight text-white font-sans group-hover:text-[#00F0FF] transition-colors whitespace-nowrap">
+                  Digital Attention Exchange
+                </span>
+                <span className="text-[9px] uppercase font-mono tracking-widest text-[#00F0FF]/80 whitespace-nowrap">
+                  Decentralized Attention Market
                 </span>
               </div>
-            </div>
+            </a>
 
-            {/* Brand Name + Signature */}
-            <div className="flex flex-col leading-tight">
-              <span className="font-extrabold text-[15px] tracking-widest text-white uppercase font-sans whitespace-nowrap group-hover:text-[#00F0FF] transition-colors duration-300">
-                Digital Attention Exchange
-              </span>
-              <span className="text-[9px] uppercase font-mono tracking-[0.18em] text-[#00F0FF]/70 whitespace-nowrap mt-[1px]">
-                WHERE ATTENTION MEETS VALUE
-              </span>
+            {/* Live Indicator Badge */}
+            <div className="hidden 2xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00F0FF]/10 border border-[#00F0FF]/20 text-[11px] font-mono text-[#00F0FF] shrink-0 whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-[#00F0FF] animate-ping shrink-0" />
+              <span className="whitespace-nowrap">LIVE INDEX 82.41 ↑</span>
             </div>
-          </a>
-
-          {/* ── SEGMENT 2: LIVE INDEX BADGE ── */}
-          <div className="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00F0FF]/8 border border-[#00F0FF]/20 text-[11px] font-mono text-[#00F0FF] flex-shrink-0">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00F0FF] animate-ping flex-shrink-0" />
-            <span className="whitespace-nowrap">LIVE INDEX 82.41 ↑</span>
           </div>
 
-          {/* ── SEGMENT 3: NAVIGATION LINKS (one-liner, whitespace-nowrap) ── */}
-          <div className="hidden lg:flex items-center gap-6 ml-2">
+          {/* Desktop Navigation Links - Guaranteed One-Liners with Balanced Space */}
+          <div className="hidden lg:flex items-center space-x-4 xl:space-x-6 2xl:space-x-7 shrink-0">
             <a href="#explore" className="text-sm font-medium text-gray-300 hover:text-[#00F0FF] transition-colors whitespace-nowrap">
               Explore
             </a>
@@ -67,38 +56,35 @@ export default function Navbar({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }
             <a href="#blog" className="text-sm font-medium text-gray-300 hover:text-[#00F0FF] transition-colors whitespace-nowrap">
               Blog
             </a>
-          </div>
-
-          {/* ── SEGMENT 4: ACTION BUTTONS (pushed to right) ── */}
-          <div className="hidden md:flex items-center gap-3 ml-auto flex-shrink-0">
-            <a
-              href="#community"
-              className="text-sm font-medium text-gray-300 hover:text-white transition-colors whitespace-nowrap"
-            >
+            <a href="#community" className="text-sm font-medium text-gray-300 hover:text-[#00F0FF] transition-colors whitespace-nowrap">
               Community
             </a>
+          </div>
+
+          {/* Right Action CTA Buttons - Guaranteed One-Liners */}
+          <div className="hidden md:flex items-center space-x-3 shrink-0">
             <button
               onClick={() => onOpenAuth('signin')}
-              className="text-sm font-semibold text-gray-200 hover:text-[#00F0FF] px-4 py-2 rounded-lg transition-colors whitespace-nowrap"
+              className="text-sm font-semibold text-gray-200 hover:text-[#00F0FF] px-3 py-2 rounded-lg transition-colors whitespace-nowrap shrink-0"
             >
               Sign In
             </button>
             <button
               onClick={onOpenAppDemo}
-              className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-r from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] hover:from-[#00F0FF] hover:to-[#3B82F6] text-white shadow-[0_0_20px_rgba(0,240,255,0.3)] hover:shadow-[0_0_28px_rgba(59,130,246,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 flex-shrink-0"
+              className="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-semibold rounded-xl group bg-gradient-to-r from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] group-hover:from-[#00F0FF] group-hover:to-[#3B82F6] text-white shadow-glowCyan hover:shadow-glowBlue transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap"
             >
-              <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-[#07090E] rounded-[10px] group-hover:bg-transparent flex items-center gap-2 whitespace-nowrap">
-                <span>Launch App</span>
-                <ArrowUpRight className="w-4 h-4 text-[#00F0FF] group-hover:text-white transition-colors" />
+              <span className="relative px-4 py-2 transition-all ease-in duration-75 bg-[#07090E] rounded-[10px] group-hover:bg-transparent flex items-center space-x-1.5 whitespace-nowrap">
+                <span className="whitespace-nowrap">Launch App</span>
+                <ArrowUpRight className="w-4 h-4 text-[#00F0FF] group-hover:text-white transition-colors shrink-0" />
               </span>
             </button>
           </div>
 
-          {/* ── MOBILE MENU BUTTON ── */}
-          <div className="flex md:hidden items-center gap-3 ml-auto">
+          {/* Mobile Menu Button */}
+          <div className="flex md:hidden items-center space-x-3">
             <button
               onClick={onOpenAppDemo}
-              className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#00F0FF] text-black hover:bg-[#00F0FF]/90 transition-colors whitespace-nowrap"
+              className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-[#00F0FF] text-black hover:bg-[#00F0FF]/90 transition-colors"
             >
               Launch App
             </button>
@@ -113,37 +99,61 @@ export default function Navbar({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }
         </div>
       </div>
 
-      {/* ── MOBILE DRAWER ── */}
+      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 px-4 pt-4 pb-6 space-y-3 bg-[#07090E]/95 backdrop-blur-xl">
-          {[
-            { href: '#explore', label: 'Explore' },
-            { href: '#how-it-works', label: 'How It Works' },
-            { href: '#attention-index', label: 'Attention Index' },
-            { href: '#for-owners', label: 'For Owners' },
-            { href: '#docs', label: 'Docs' },
-            { href: '#blog', label: 'Blog' },
-            { href: '#community', label: 'Community' },
-          ].map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
-            >
-              {label}
-            </a>
-          ))}
-          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <div className="md:hidden glass-panel border-t border-white/10 px-4 pt-4 pb-6 space-y-3 bg-[#07090E]/95">
+          <a
+            href="#explore"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            Explore
+          </a>
+          <a
+            href="#how-it-works"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            How It Works
+          </a>
+          <a
+            href="#attention-index"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            Attention Index
+          </a>
+          <a
+            href="#for-owners"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            For Owners
+          </a>
+          <a
+            href="#docs"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            Docs
+          </a>
+          <a
+            href="#blog"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-[#00F0FF] hover:bg-white/5"
+          >
+            Blog
+          </a>
+          <div className="pt-4 border-t border-white/10 flex flex-col space-y-3">
             <button
-              onClick={() => { setMobileMenuOpen(false); onOpenAuth('signin'); }}
+              onClick={() => { setMobileMenuOpen(false); onOpenAuth('signup'); }}
               className="w-full text-center py-2.5 rounded-xl border border-white/10 text-sm font-semibold text-white hover:bg-white/5"
             >
-              Sign In
+              Sign Up
             </button>
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenRegisterSite(); }}
-              className="w-full text-center py-2.5 rounded-xl bg-[#00F0FF] text-black text-sm font-bold shadow-[0_0_20px_rgba(0,240,255,0.3)]"
+              className="w-full text-center py-2.5 rounded-xl bg-[#00F0FF] text-black text-sm font-bold shadow-glowCyan"
             >
               Register Website
             </button>

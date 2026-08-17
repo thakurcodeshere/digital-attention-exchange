@@ -12,7 +12,7 @@ export default function AttentionIndexSection({ onOpenMethodology }) {
   });
 
   const presets = {
-    tech: { name: 'DAE / TECHNOLOGY', engagement: 91, velocity: 84, retention: 88, conversion: 76, network: 92 },
+    tech: { name: 'SITE / TECHNOLOGY', engagement: 91, velocity: 84, retention: 88, conversion: 76, network: 92 },
     techflow: { name: 'TechFlow.io', engagement: 95, velocity: 92, retention: 89, conversion: 85, network: 94 },
     research: { name: 'ResearchHub.org', engagement: 98, velocity: 78, retention: 96, conversion: 80, network: 95 },
     buildstack: { name: 'BuildStack.dev', engagement: 79, velocity: 88, retention: 72, conversion: 68, network: 74 }
@@ -63,7 +63,7 @@ export default function AttentionIndexSection({ onOpenMethodology }) {
             Not all traffic is <span className="gradient-text-cyan">equal.</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Digital Attention Exchange evaluates websites using multiple dimensions of attention.
+            SITE evaluates websites using multiple dimensions of attention.
           </p>
         </div>
 

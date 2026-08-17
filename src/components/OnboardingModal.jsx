@@ -43,7 +43,7 @@ export default function OnboardingModal({ isOpen, onClose, initialMode = 'signup
                 <span>WELCOME TO DIGITAL ATTENTION EXCHANGE</span>
               </div>
               <h3 className="text-2xl font-bold text-white">
-                {mode === 'signup' ? 'Create your attention profile' : 'Sign in to DAE'}
+                {mode === 'signup' ? 'Create your attention profile' : 'Sign in to Digital Attention Exchange'}
               </h3>
               <p className="text-sm text-gray-400">
                 What brings you here? Select your primary interest.

@@ -24,7 +24,7 @@ export default function TokenSection({ onOpenDocs }) {
             One network. <span className="gradient-text-cyan">One coordination layer.</span>
           </h2>
           <p className="text-lg text-gray-300">
-            <strong className="text-white font-semibold">$SITE</strong> is designed as the coordination asset of the ecosystem, while individual Site Shares represent exposure to individual attention markets.
+            <strong className="text-white font-semibold">$DAE</strong> is designed as the coordination asset of the ecosystem, while individual Site Shares represent exposure to individual attention markets.
           </p>
         </div>
 
