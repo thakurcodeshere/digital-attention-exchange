@@ -67,7 +67,7 @@ export default function ProblemSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Sparkles className="w-8 h-8 text-[#00F0FF] animate-pulse" />
             <h3 className="text-2xl sm:text-4xl font-extrabold text-white">
-              <span className="gradient-text-cyan">SITE introduces an attention market.</span>
+              <span className="gradient-text-cyan">Digital Attention Exchange introduces an attention market.</span>
             </h3>
           </div>
           <p className="text-gray-400 text-sm sm:text-base mt-4 max-w-2xl mx-auto">

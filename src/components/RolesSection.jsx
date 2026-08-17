@@ -102,7 +102,7 @@ export default function RolesSection({ onOpenRegisterSite, onOpenAppDemo, onOpen
             Choose your role in the <span className="gradient-text-cyan">attention economy.</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Whether you visit, own, trade, curate, or validate — SITE creates value for every ecosystem participant.
+            Whether you visit, own, trade, curate, or validate — Digital Attention Exchange creates value for every ecosystem participant.
           </p>
         </div>
 

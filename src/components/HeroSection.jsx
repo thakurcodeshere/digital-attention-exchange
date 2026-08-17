@@ -44,7 +44,7 @@ export default function HeroSection({ onOpenRegisterSite }) {
 
             {/* Supporting Statement */}
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl leading-relaxed font-normal">
-              Every day, billions of people spend time on websites. <strong className="text-white font-semibold">SITE</strong> turns that attention into measurable market data — so websites can understand their value, users can earn from genuine engagement, and markets can discover where attention is moving.
+              Every day, billions of people spend time on websites. <strong className="text-white font-semibold">Digital Attention Exchange</strong> turns that attention into measurable market data — so websites can understand their value, users can earn from genuine engagement, and markets can discover where attention is moving.
             </p>
 
             {/* Action Buttons */}
@@ -103,7 +103,7 @@ export default function HeroSection({ onOpenRegisterSite }) {
               {/* Index Value Box */}
               <div className="bg-[#07090E]/80 rounded-2xl p-5 border border-white/10 space-y-2">
                 <div className="flex justify-between items-baseline">
-                  <span className="text-xs font-mono text-gray-400 uppercase">SITE ATTENTION INDEX</span>
+                  <span className="text-xs font-mono text-gray-400 uppercase">DAE ATTENTION INDEX</span>
                   <span className="text-xs font-mono text-emerald-400 font-semibold">+2.84% 24h</span>
                 </div>
                 <div className="flex items-baseline space-x-3">

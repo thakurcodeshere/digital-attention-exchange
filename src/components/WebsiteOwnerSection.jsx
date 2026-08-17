@@ -23,7 +23,7 @@ export default function WebsiteOwnerSection({ onOpenRegisterSite }) {
             </h2>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              SITE gives website owners a new way to measure, understand and participate in the economic value of their attention.
+              Digital Attention Exchange gives website owners a new way to measure, understand and participate in the economic value of their attention.
             </p>
 
             {/* Workflow Pipeline */}

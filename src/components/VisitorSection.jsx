@@ -91,7 +91,7 @@ export default function VisitorSection({ onOpenAuth }) {
             </h2>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              SITE is designed to reward genuine participation across the attention economy.
+              Digital Attention Exchange is designed to reward genuine participation across the attention economy.
             </p>
 
             <div className="space-y-3 pt-2">

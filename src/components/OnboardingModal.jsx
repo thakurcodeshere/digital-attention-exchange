@@ -40,10 +40,10 @@ export default function OnboardingModal({ isOpen, onClose, initialMode = 'signup
             {/* Header */}
             <div className="space-y-2 text-left">
               <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00F0FF]/10 text-xs font-mono text-[#00F0FF]">
-                <span>WELCOME TO SITE</span>
+                <span>WELCOME TO DIGITAL ATTENTION EXCHANGE</span>
               </div>
               <h3 className="text-2xl font-bold text-white">
-                {mode === 'signup' ? 'Create your attention profile' : 'Sign in to SITE'}
+                {mode === 'signup' ? 'Create your attention profile' : 'Sign in to DAE'}
               </h3>
               <p className="text-sm text-gray-400">
                 What brings you here? Select your primary interest.

@@ -53,7 +53,7 @@ export default function JournalSection() {
             The Attention <span className="gradient-text-cyan">Economy Journal</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Establishing SITE as an intellectual category creator in web valuation data science.
+            Establishing Digital Attention Exchange as an intellectual category creator in web valuation data science.
           </p>
         </div>
 

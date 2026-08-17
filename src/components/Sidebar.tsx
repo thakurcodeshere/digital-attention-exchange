@@ -58,15 +58,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Brand Header */}
       <div className="sidebar-brand">
         <div className="brand-logo-container">
-          <div className="brand-icon">
-            <Sparkles className="logo-sparkle" />
-          </div>
-          {!collapsed && (
-            <div className="brand-text">
-              <span className="brand-title">SITE</span>
-              <span className="brand-subtitle">Attention Exchange</span>
+          <div className="brand-icon relative overflow-hidden">
+              {/* DAE monogram */}
+              <span className="font-black text-[9px] tracking-tighter font-mono select-none leading-none">
+                <span style={{color:'#00F0FF'}}>D</span>
+                <span style={{color:'rgba(255,255,255,0.4)'}}>·</span>
+                <span style={{color:'#3B82F6'}}>A</span>
+                <span style={{color:'rgba(255,255,255,0.4)'}}>·</span>
+                <span style={{color:'#8B5CF6'}}>E</span>
+              </span>
             </div>
-          )}
+            {!collapsed && (
+              <div className="brand-text">
+                <span className="brand-title" style={{fontSize:'11px', letterSpacing:'0.05em'}}>Digital Attention Exchange</span>
+                <span className="brand-subtitle">Where Attention Meets Value</span>
+              </div>
+            )}
         </div>
         <button 
           className="collapse-btn" 
