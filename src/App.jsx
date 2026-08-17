@@ -150,7 +150,6 @@ export default function App() {
             <span>Launch App</span>
             <i className="fa-solid fa-arrow-up-right-from-square"></i>
           </button>
-        </div>
 
           {/* User Header Widget */}
           {activeView !== 'landing' && (

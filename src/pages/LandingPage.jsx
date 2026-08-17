@@ -325,40 +325,6 @@ export default function LandingPage({ setView, showToast }) {
               <i className="fa-solid fa-rectangle-ad text-rose"></i>
               <h3>Ad Creatives</h3>
               <p className="small muted text-center">Gauge visual appeal before launching display ads.</p>
-                  
-                  {!runningAnalysis && !analysisDone && (
-                    <button className="btn btn-primary" onClick={() => {
-                      setRunningAnalysis(true);
-                      setTimeout(() => {
-                        setRunningAnalysis(false);
-                        setAnalysisDone(true);
-                        showToast('Telemetry Simulated', 'Computed visual gaze map & 92% attention rating.', 'success');
-                      }, 2500);
-                    }}>
-                      Run Simulated Telemetry Audit
-                    </button>
-                  )}
-
-                  {runningAnalysis && (
-                    <div className="simulating-progress">
-                      <div className="spinner"></div>
-                      <span>Simulating 15 developer eye-tracking gaze paths & click maps...</span>
-                    </div>
-                  )}
-
-                  {analysisDone && (
-                    <div className="analysis-result-box">
-                      <div className="result-header">
-                        <span className="badge badge-emerald">92% Attention Score</span>
-                        <span className="badge badge-indigo">1.4s Avg. CTA Discovery</span>
-                      </div>
-                      <p className="small">
-                        <strong>Telemetry Summary:</strong> Primary CTA button receives immediate gaze focus within 400ms. Copy clutter on right column causes 15% drop-off risk.
-                      </p>
-                    </div>
-                  )}
-                </div>
-              )}
             </div>
           </div>
         </div>
