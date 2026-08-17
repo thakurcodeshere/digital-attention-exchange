@@ -16,7 +16,7 @@ export default function AppDemoModal({ isOpen, onClose }) {
   ];
 
   const handleTrade = (action) => {
-    setTradeStatus(`Successfully submitted ${action} order of ${tradeAmount} SITE on TechFlow.io!`);
+    setTradeStatus(`Successfully submitted ${action} order of ${tradeAmount} DAE on TechFlow.io!`);
     setTimeout(() => setTradeStatus(null), 4000);
   };
 
@@ -27,10 +27,12 @@ export default function AppDemoModal({ isOpen, onClose }) {
         {/* Top App Navbar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0E131F]">
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 rounded-lg bg-[#00F0FF] text-black font-mono font-black flex items-center justify-center">
-              S
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] p-[1px] shadow-glowCyan flex items-center justify-center shrink-0">
+              <div className="w-full h-full bg-[#07090E] rounded-[7px] flex items-center justify-center font-mono font-black text-xs text-[#00F0FF]">
+                DAE
+              </div>
             </div>
-            <span className="font-extrabold text-xl tracking-wider font-sans">SITE APP</span>
+            <span className="font-extrabold text-xl tracking-wider font-sans">DAE APP</span>
             <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono">
               ● SIMULATED MAINNET
             </span>
@@ -39,7 +41,7 @@ export default function AppDemoModal({ isOpen, onClose }) {
           <div className="flex items-center space-x-3">
             <div className="hidden sm:flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono text-[#00F0FF]">
               <Wallet className="w-3.5 h-3.5" />
-              <span>0x84...92A (1,240.50 SITE)</span>
+              <span>0x84...92A (1,240.50 DAE)</span>
             </div>
 
             <button
@@ -59,7 +61,7 @@ export default function AppDemoModal({ isOpen, onClose }) {
             {[
               { id: 'overview', label: 'Overview', icon: Activity },
               { id: 'explore', label: 'Explore', icon: Search },
-              { id: 'markets', label: 'Site Markets', icon: TrendingUp },
+              { id: 'markets', label: 'DAE Markets', icon: TrendingUp },
               { id: 'owner', label: 'Owner Console', icon: Globe },
               { id: 'portfolio', label: 'Portfolio & Rewards', icon: User },
               { id: 'validator', label: 'Validator & Defense', icon: ShieldCheck },
@@ -133,8 +135,8 @@ export default function AppDemoModal({ isOpen, onClose }) {
             {(activeTab === 'explore' || activeTab === 'markets') && (
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-bold">Site Share Trading Terminal</h3>
-                  <span className="text-xs font-mono text-gray-400">PAIR: TECHFLOW / SITE</span>
+                  <h3 className="text-xl font-bold">DAE Attention Share Trading Terminal</h3>
+                  <span className="text-xs font-mono text-gray-400">PAIR: TECHFLOW / DAE</span>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -167,10 +169,10 @@ export default function AppDemoModal({ isOpen, onClose }) {
 
                   {/* Trade action box */}
                   <div className="lg:col-span-5 bg-white/5 rounded-2xl p-5 border border-white/10 space-y-4">
-                    <div className="text-xs font-mono text-gray-400 uppercase">Trade Site Shares</div>
+                    <div className="text-xs font-mono text-gray-400 uppercase">Trade Attention Shares</div>
                     
                     <div className="space-y-2 text-xs font-mono">
-                      <label className="text-gray-300">Amount ($SITE)</label>
+                      <label className="text-gray-300">Amount ($DAE)</label>
                       <input
                         type="text"
                         value={tradeAmount}
@@ -233,7 +235,7 @@ export default function AppDemoModal({ isOpen, onClose }) {
 
                 <div className="bg-white/5 p-6 rounded-2xl border border-white/10 space-y-4">
                   <div className="text-xs font-mono text-gray-400">TODAY'S ACCUMULATED REWARDS</div>
-                  <div className="text-4xl font-extrabold font-mono text-[#00F0FF]">+12.4 SITE</div>
+                  <div className="text-4xl font-extrabold font-mono text-[#00F0FF]">+12.4 DAE</div>
                   <div className="text-xs text-gray-300 font-mono">14 Verified High-Depth Dwell Sessions</div>
                 </div>
               </div>
@@ -250,7 +252,7 @@ export default function AppDemoModal({ isOpen, onClose }) {
                 <div className="bg-black/60 p-4 rounded-2xl border border-white/10 font-mono text-xs text-gray-300 space-y-2">
                   <div>[16:44:02] Oracle attestation broadcast received from Node #14</div>
                   <div>[16:44:05] Bot challenge resolved: 1,420 synthetic sessions slashed on Domain #88</div>
-                  <div className="text-emerald-400">[16:44:10] Attestation block #184920 verified. Reward +0.40 SITE</div>
+                  <div className="text-emerald-400">[16:44:10] Attestation block #184920 verified. Reward +0.40 DAE</div>
                 </div>
               </div>
             )}

@@ -4,22 +4,22 @@ import { Code, Key, Zap, Check, Copy, Plus, Activity, Terminal } from 'lucide-re
 export default function DevelopersApiTab() {
   const [copied, setCopied] = useState(false);
   const [keys, setKeys] = useState([
-    { name: 'Production Mainnet Key', key: 'site_live_98a42f0192e81...', status: 'Active' },
-    { name: 'Staging Sandbox Key', key: 'site_test_1109a842f11c2...', status: 'Active' }
+    { name: 'Production Mainnet Key', key: 'dae_live_98a42f0192e81...', status: 'Active' },
+    { name: 'Staging Sandbox Key', key: 'dae_test_1109a842f11c2...', status: 'Active' }
   ]);
   const [keyModalOpen, setKeyModalOpen] = useState(false);
 
-  const sdkCode = `import { SiteClient } from '@site/sdk';
+  const sdkCode = `import { DAEClient } from '@dae/sdk';
 
-const site = new SiteClient({
-  apiKey: 'site_live_98a42f0192e81',
+const dae = new DAEClient({
+  apiKey: 'dae_live_98a42f0192e81',
   network: 'mainnet'
 });
 
 // Stream real-time zero-knowledge attention proofs
-site.telemetry.onProof((proof) => {
+dae.telemetry.onProof((proof) => {
   console.log('Verified Attention Block:', proof.blockNumber);
-  console.log('Reward Earned ($SITE):', proof.reward);
+  console.log('Reward Earned ($DAE):', proof.reward);
 });`;
 
   const handleCopy = () => {
@@ -31,7 +31,7 @@ site.telemetry.onProof((proof) => {
   const handleGenerateKey = () => {
     const newKey = {
       name: `API Key #${keys.length + 1}`,
-      key: `site_live_${Math.random().toString(36).substr(2, 12)}...`,
+      key: `dae_live_${Math.random().toString(36).substr(2, 12)}...`,
       status: 'Active'
     };
     setKeys([...keys, newKey]);

@@ -120,7 +120,7 @@ export default function Footer({ onOpenAppDemo, onOpenAuth, onOpenRegisterSite }
 
         {/* Bottom Tagline & Copyright */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-gray-500 gap-4">
-          <div>© 2026 SITE. All rights reserved.</div>
+          <div>© 2026 Digital Attention Exchange. All rights reserved.</div>
           <div className="text-[#00F0FF] font-semibold">
             Digital attention is measurable. The market is just beginning.
           </div>

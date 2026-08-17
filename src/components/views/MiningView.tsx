@@ -18,10 +18,10 @@ export const MiningView: React.FC = () => {
 
         <div className="metric-card">
           <div className="metric-header">
-            <span className="metric-title">Unclaimed $SITE Rewards</span>
+            <span className="metric-title">Unclaimed $DAE Rewards</span>
             <Award size={18} className="metric-icon text-emerald" />
           </div>
-          <div className="metric-value">148.50 <span className="metric-unit">$SITE</span></div>
+          <div className="metric-value">148.50 <span className="metric-unit">$DAE</span></div>
           <div className="metric-footer positive">~$716.51 USDC</div>
         </div>
 
@@ -62,10 +62,10 @@ export const MiningView: React.FC = () => {
                 {isMining ? 'Attention Mining active on Local Worker' : 'Node Paused'}
               </div>
               <p className="hero-status-desc">
-                Your browser & background telemetry extension are validating user engagement proofs and receiving $SITE rewards every block.
+                Your browser & background telemetry extension are validating user engagement proofs and receiving $DAE rewards every block.
               </p>
               <div className="claim-action-row">
-                <button className="btn-lg btn-primary">Claim 148.50 $SITE Rewards</button>
+                <button className="btn-lg btn-primary">Claim 148.50 $DAE Rewards</button>
                 <button className="btn-lg btn-secondary">Stake Rewards (+15% APY)</button>
               </div>
             </div>

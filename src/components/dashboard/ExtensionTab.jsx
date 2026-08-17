@@ -11,7 +11,7 @@ export default function ExtensionTab() {
 
       <div className="bg-[#0E131F] p-8 rounded-2xl border border-white/10 space-y-4">
         <div className="flex justify-between items-center">
-          <div className="text-lg font-bold text-white">SITE Extension v2.4</div>
+          <div className="text-lg font-bold text-white">DAE Extension v2.4</div>
           <span className="px-3 py-1 bg-emerald-500/10 text-emerald-400 font-mono text-xs rounded-full border border-emerald-500/30">
             ● CONNECTED & ACTIVE
           </span>

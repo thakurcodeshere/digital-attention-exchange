@@ -5,12 +5,12 @@ export default function DiscoverTab() {
   const [filter, setFilter] = useState('ALL');
 
   const sites = [
-    { name: 'TechFlow.io', ai: '91.4', change: '+18.2%', category: 'Tech', volume: '1.8M SITE', dwell: '6m 15s' },
-    { name: 'ResearchHub.org', ai: '94.7', change: '+12.1%', category: 'Research', volume: '3.4M SITE', dwell: '8m 42s' },
-    { name: 'BuildStack.dev', ai: '74.2', change: '+38.4%', category: 'Dev Tools', volume: '920K SITE', dwell: '9m 20s' },
-    { name: 'DevSphere.app', ai: '88.9', change: '+14.5%', category: 'Dev Tools', volume: '2.1M SITE', dwell: '12m 10s' },
-    { name: 'DesignPulse.co', ai: '82.5', change: '+19.6%', category: 'Design', volume: '1.4M SITE', dwell: '5m 45s' },
-    { name: 'CryptoMetrics.ai', ai: '90.1', change: '+25.3%', category: 'Web3', volume: '4.2M SITE', dwell: '11m 30s' }
+    { name: 'TechFlow.io', ai: '91.4', change: '+18.2%', category: 'Tech', volume: '1.8M DAE', dwell: '6m 15s' },
+    { name: 'ResearchHub.org', ai: '94.7', change: '+12.1%', category: 'Research', volume: '3.4M DAE', dwell: '8m 42s' },
+    { name: 'BuildStack.dev', ai: '74.2', change: '+38.4%', category: 'Dev Tools', volume: '920K DAE', dwell: '9m 20s' },
+    { name: 'DevSphere.app', ai: '88.9', change: '+14.5%', category: 'Dev Tools', volume: '2.1M DAE', dwell: '12m 10s' },
+    { name: 'DesignPulse.co', ai: '82.5', change: '+19.6%', category: 'Design', volume: '1.4M DAE', dwell: '5m 45s' },
+    { name: 'CryptoMetrics.ai', ai: '90.1', change: '+25.3%', category: 'Web3', volume: '4.2M DAE', dwell: '11m 30s' }
   ];
 
   return (

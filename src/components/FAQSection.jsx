@@ -6,20 +6,20 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      q: 'What is SITE?',
-      a: 'SITE is the market for internet attention. It provides an open valuation and verification layer that converts digital traffic into multi-dimensional Attention Index market data.'
+      q: 'What is Digital Attention Exchange?',
+      a: 'Digital Attention Exchange is the market for internet attention. It provides an open valuation and verification layer that converts digital traffic into multi-dimensional Attention Index market data.'
     },
     {
-      q: 'What exactly does $SITE represent?',
-      a: '$SITE is the coordination and utility token of the ecosystem. It is used for validator staking, reward distribution, protocol parameter governance, and market settlement.'
+      q: 'What exactly does $DAE represent?',
+      a: '$DAE is the coordination and utility token of the ecosystem. It is used for validator staking, reward distribution, protocol parameter governance, and market settlement.'
     },
     {
-      q: 'What are Site Shares?',
-      a: 'Site Shares represent market exposure to the measured attention performance of an individual website or digital property.'
+      q: 'What are Attention Shares?',
+      a: 'Attention Shares represent market exposure to the measured attention performance of an individual website or digital property.'
     },
     {
-      q: 'Does owning a Site Share mean owning part of a company?',
-      a: 'No. Site Shares represent exposure to measured attention performance metrics, not corporate equity, voting rights, or company ownership.'
+      q: 'Does owning an Attention Share mean owning part of a company?',
+      a: 'No. Attention Shares represent exposure to measured attention performance metrics, not corporate equity, voting rights, or company ownership.'
     },
     {
       q: 'How is attention measured?',
@@ -27,7 +27,7 @@ export default function FAQSection() {
     },
     {
       q: 'How do you detect bots?',
-      a: 'SITE uses multi-layer behavioral telemetry, statistical anomaly detection, validator attestations, and zero-knowledge human interaction proofs to filter out synthetic engagement.'
+      a: 'Digital Attention Exchange uses multi-layer behavioral telemetry, statistical anomaly detection, validator attestations, and zero-knowledge human interaction proofs to filter out synthetic engagement.'
     },
     {
       q: 'Can website owners manipulate their metrics?',
@@ -43,11 +43,11 @@ export default function FAQSection() {
     },
     {
       q: 'How does the token work?',
-      a: '$SITE serves as the ecosystem settlement currency, reward payout unit, validator staking asset, and protocol governance voting mechanism.'
+      a: '$DAE serves as the ecosystem settlement currency, reward payout unit, validator staking asset, and protocol governance voting mechanism.'
     },
     {
-      q: 'Is SITE regulated?',
-      a: 'SITE operates as an open digital attention data infrastructure layer. Specific market instruments comply with relevant jurisdictional policies.'
+      q: 'Is Digital Attention Exchange regulated?',
+      a: 'Digital Attention Exchange operates as an open digital attention data infrastructure layer. Specific market instruments comply with relevant jurisdictional policies.'
     },
     {
       q: 'Which countries are supported?',
@@ -55,11 +55,11 @@ export default function FAQSection() {
     },
     {
       q: 'What happens if a website shuts down?',
-      a: 'If a digital property goes offline, its Attention Index score gracefully decays, and Site Share liquidity pools settle according to protocol rules.'
+      a: 'If a digital property goes offline, its Attention Index score gracefully decays, and Attention Share liquidity pools settle according to protocol rules.'
     },
     {
       q: 'What happens if the protocol fails?',
-      a: 'SITE is built on open-source smart contracts and immutable data indexers that remain fully accessible independently.'
+      a: 'Digital Attention Exchange is built on open-source smart contracts and immutable data indexers that remain fully accessible independently.'
     },
     {
       q: 'Is the code open source?',
@@ -80,7 +80,7 @@ export default function FAQSection() {
             Frequently Asked <span className="gradient-text-cyan">Questions</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Clear, transparent answers to core questions about SITE.
+            Clear, transparent answers to core questions about Digital Attention Exchange.
           </p>
         </div>
 

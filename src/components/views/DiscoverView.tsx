@@ -30,7 +30,7 @@ export const DiscoverView: React.FC = () => {
             <Flame size={18} className="metric-icon text-rose" />
           </div>
           <div className="metric-value">34.2%</div>
-          <div className="metric-footer neutral">Boosted by $SITE incentives</div>
+          <div className="metric-footer neutral">Boosted by $DAE incentives</div>
         </div>
 
         <div className="metric-card">
@@ -68,7 +68,7 @@ export const DiscoverView: React.FC = () => {
                     <div className="table-cell-sub">User Onboarding Study</div>
                   </td>
                   <td>DeFi Power Users</td>
-                  <td>$450,000 $SITE</td>
+                  <td>$450,000 $DAE</td>
                   <td className="text-emerald font-bold">42.8%</td>
                   <td><button className="btn-sm btn-primary">Join Pool</button></td>
                 </tr>
@@ -78,7 +78,7 @@ export const DiscoverView: React.FC = () => {
                     <div className="table-cell-sub">UX Feedback & Eye Tracking</div>
                   </td>
                   <td>Global Traders</td>
-                  <td>$280,000 $SITE</td>
+                  <td>$280,000 $DAE</td>
                   <td className="text-emerald font-bold">38.4%</td>
                   <td><button className="btn-sm btn-primary">Join Pool</button></td>
                 </tr>
@@ -88,7 +88,7 @@ export const DiscoverView: React.FC = () => {
                     <div className="table-cell-sub">Key Retention Metrics</div>
                   </td>
                   <td>Crypto Natives</td>
-                  <td>$195,000 $SITE</td>
+                  <td>$195,000 $DAE</td>
                   <td className="text-emerald font-bold">29.1%</td>
                   <td><button className="btn-sm btn-primary">Join Pool</button></td>
                 </tr>
@@ -123,8 +123,8 @@ export const DiscoverView: React.FC = () => {
             <div className="highlight-item">
               <div className="highlight-badge emerald">STAKING</div>
               <div className="highlight-info">
-                <h4>$SITE Lock-up Vault Season 3</h4>
-                <p>Lock $SITE for 90 days to receive multiplier on all mining attention rewards.</p>
+                <h4>$DAE Lock-up Vault Season 3</h4>
+                <p>Lock $DAE for 90 days to receive multiplier on all mining attention rewards.</p>
               </div>
               <ArrowUpRight size={18} className="text-muted" />
             </div>

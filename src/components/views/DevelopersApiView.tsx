@@ -4,17 +4,17 @@ import { Code2, Key, Terminal, Copy, Check, Zap } from 'lucide-react';
 export const DevelopersApiView: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
-  const codeSnippet = `import { SiteClient } from '@site/sdk';
+  const codeSnippet = `import { DAEClient } from '@dae/sdk';
 
-const site = new SiteClient({
-  apiKey: 'site_live_98a42f0192e81',
+const dae = new DAEClient({
+  apiKey: 'dae_live_98a42f0192e81',
   network: 'mainnet'
 });
 
 // Stream real-time zero-knowledge attention proofs
-site.telemetry.onProof((proof) => {
+dae.telemetry.onProof((proof) => {
   console.log('Verified Attention Block:', proof.blockNumber);
-  console.log('Reward Earned ($SITE):', proof.reward);
+  console.log('Reward Earned ($DAE):', proof.reward);
 });`;
 
   const copyToClipboard = () => {
@@ -86,7 +86,7 @@ site.telemetry.onProof((proof) => {
             <div className="key-item">
               <div className="key-info">
                 <div className="key-name">Production Mainnet Key</div>
-                <div className="key-val">site_live_98a42f0192e81...</div>
+                <div className="key-val">dae_live_98a42f0192e81...</div>
               </div>
               <span className="key-badge active">Active</span>
             </div>
@@ -94,7 +94,7 @@ site.telemetry.onProof((proof) => {
             <div className="key-item">
               <div className="key-info">
                 <div className="key-name">Staging Sandbox Key</div>
-                <div className="key-val">site_test_1109a842f11c2...</div>
+                <div className="key-val">dae_test_1109a842f11c2...</div>
               </div>
               <span className="key-badge active">Active</span>
             </div>

@@ -21,7 +21,7 @@ export default function CapabilitiesRoadmap() {
       action: 'Discover',
       status: 'IN PROGRESS',
       items: [
-        'Site Shares synthetic performance contracts',
+        'DAE Attention Shares synthetic performance contracts',
         'Real-time Market Explorer & order book interface',
         'Decentralized trading infrastructure & AMM pools',
         'Curator lists and track record reputation score'

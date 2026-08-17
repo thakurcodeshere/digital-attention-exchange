@@ -18,7 +18,7 @@ export default function ValidatorsTab() {
         <div className="space-y-2 bg-[#07090E] p-4 rounded-xl text-gray-300">
           <div>[17:20:11] Validator Node #12 verified telemetry block #194820</div>
           <div>[17:20:15] Intercepted synthetic traffic spike on Domain #912 — 1,280 bot sessions discounted</div>
-          <div className="text-emerald-400">[17:20:20] Slashing challenge resolved cleanly. Bounty +45 SITE awarded to Node #12</div>
+          <div className="text-emerald-400">[17:20:20] Slashing challenge resolved cleanly. Bounty +45 DAE awarded to Node #12</div>
         </div>
       </div>
     </div>

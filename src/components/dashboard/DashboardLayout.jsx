@@ -28,7 +28,7 @@ export default function DashboardLayout({ activeSubTab, setActiveSubTab, onBackT
     { id: 'owner-workspace', label: 'Owner Workspace', icon: UserCheck },
     { id: 'indices', label: 'Indices', icon: Layers },
     { id: 'validators', label: 'Validators', icon: ShieldCheck },
-    { id: 'economy', label: '$SITE Economy', icon: Coins },
+    { id: 'economy', label: '$DAE Economy', icon: Coins },
     { id: 'governance', label: 'Governance', icon: Vote },
     { id: 'developers-api', label: 'Developers API', icon: Code }
   ];
@@ -53,7 +53,7 @@ export default function DashboardLayout({ activeSubTab, setActiveSubTab, onBackT
     <div className="flex h-screen bg-[#07090E] text-[#F3F4F6] overflow-hidden font-sans">
       
       {/* LEFT VERTICAL SIDEBAR */}
-      <aside className={`${sidebarCollapsed ? 'w-20' : 'w-64'} bg-[#07090E] border-r border-white/10 flex flex-col justify-between transition-all duration-300 z-30 shrink-0`}>
+      <aside className={`${sidebarCollapsed ? 'w-20' : 'w-72'} bg-[#07090E] border-r border-white/10 flex flex-col justify-between transition-all duration-300 z-30 shrink-0`}>
         
         <div className="space-y-6 p-4">
           
@@ -61,22 +61,24 @@ export default function DashboardLayout({ activeSubTab, setActiveSubTab, onBackT
           <div className="flex items-center justify-between pb-2 border-b border-white/5">
             <div 
               onClick={onBackToLanding}
-              className="flex items-center space-x-3 cursor-pointer group"
+              className="flex items-center space-x-3 cursor-pointer group shrink-0"
               title="Return to Public Landing Page"
             >
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#00F0FF] to-[#3B82F6] p-[1px]">
-                <div className="w-full h-full bg-[#07090E] rounded-[11px] flex items-center justify-center font-mono font-black text-lg text-[#00F0FF]">
-                  S
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#00F0FF] via-[#3B82F6] to-[#8B5CF6] p-[1.5px] shadow-glowCyan group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <div className="w-full h-full bg-[#07090E] rounded-[9.5px] flex items-center justify-center">
+                  <span className="font-mono font-black text-sm tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#00F0FF] to-[#3B82F6]">
+                    DAE
+                  </span>
                 </div>
               </div>
 
               {!sidebarCollapsed && (
-                <div className="flex flex-col">
-                  <span className="font-extrabold text-base tracking-wider text-white group-hover:text-[#00F0FF] transition-colors leading-tight">
-                    SITE
+                <div className="flex flex-col shrink-0">
+                  <span className="font-extrabold text-sm tracking-tight text-white group-hover:text-[#00F0FF] transition-colors leading-tight whitespace-nowrap">
+                    Digital Attention Exchange
                   </span>
-                  <span className="text-[9px] uppercase font-mono tracking-widest text-gray-400">
-                    ATTENTION EXCHANGE
+                  <span className="text-[8px] uppercase font-mono tracking-widest text-[#00F0FF] whitespace-nowrap">
+                    DECENTRALIZED ATTENTION MARKET
                   </span>
                 </div>
               )}
@@ -165,9 +167,9 @@ export default function DashboardLayout({ activeSubTab, setActiveSubTab, onBackT
           {/* Right Metrics & Wallet Header Widgets */}
           <div className="flex items-center space-x-4 ml-auto">
             
-            {/* SITE Ticker */}
+            {/* DAE Ticker */}
             <div className="hidden lg:flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-xs font-mono">
-              <span className="text-gray-400">$SITE:</span>
+              <span className="text-gray-400">$DAE:</span>
               <span className="text-white font-bold">$4.82</span>
               <span className="text-emerald-400 font-semibold">+8.4%</span>
             </div>

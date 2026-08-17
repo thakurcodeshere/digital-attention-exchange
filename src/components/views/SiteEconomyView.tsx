@@ -7,7 +7,7 @@ export const SiteEconomyView: React.FC = () => {
       <div className="metrics-grid">
         <div className="metric-card">
           <div className="metric-header">
-            <span className="metric-title">$SITE Market Cap</span>
+            <span className="metric-title">$DAE Market Cap</span>
             <Coins size={18} className="metric-icon text-cyan" />
           </div>
           <div className="metric-value">$341,800,000</div>
@@ -16,10 +16,10 @@ export const SiteEconomyView: React.FC = () => {
 
         <div className="metric-card">
           <div className="metric-header">
-            <span className="metric-title">Total $SITE Burned</span>
+            <span className="metric-title">Total $DAE Burned</span>
             <Flame size={18} className="metric-icon text-rose" />
           </div>
-          <div className="metric-value">4,170,890 <span className="metric-unit">$SITE</span></div>
+          <div className="metric-value">4,170,890 <span className="metric-unit">$DAE</span></div>
           <div className="metric-footer positive">Deflationary Buyback & Burn</div>
         </div>
 
@@ -37,7 +37,7 @@ export const SiteEconomyView: React.FC = () => {
             <span className="metric-title">Burn Mechanism Rate</span>
             <RefreshCw size={18} className="metric-icon text-amber" />
           </div>
-          <div className="metric-value">12,400 <span className="metric-unit">$SITE / day</span></div>
+          <div className="metric-value">12,400 <span className="metric-unit">$DAE / day</span></div>
           <div className="metric-footer positive">Auto Buyback Active</div>
         </div>
       </div>
@@ -49,16 +49,16 @@ export const SiteEconomyView: React.FC = () => {
           </div>
           <div className="tokenomics-breakdown">
             <p>
-              Every transaction and attention proof fee generated on the Digital Attention Exchange feeds into the automated $SITE Buyback & Burn smart contract.
+              Every transaction and attention proof fee generated on the Digital Attention Exchange feeds into the automated $DAE Buyback & Burn smart contract.
             </p>
             <div className="burn-stats-row">
               <div className="burn-card">
                 <span className="label">Last Burn Event</span>
-                <span className="val text-rose">18,400 $SITE (2 hrs ago)</span>
+                <span className="val text-rose">18,400 $DAE (2 hrs ago)</span>
               </div>
               <div className="burn-card">
                 <span className="label">Next Scheduled Burn</span>
-                <span className="val text-emerald">22,000 $SITE in 4h 12m</span>
+                <span className="val text-emerald">22,000 $DAE in 4h 12m</span>
               </div>
             </div>
           </div>

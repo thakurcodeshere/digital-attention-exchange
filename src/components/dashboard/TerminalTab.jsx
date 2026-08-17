@@ -6,7 +6,7 @@ export default function TerminalTab() {
   const [tradeMessage, setTradeMessage] = useState(null);
 
   const handleOrder = (type) => {
-    setTradeMessage(`Executed ${type} order for ${amount} SITE on TechFlow.io`);
+    setTradeMessage(`Executed ${type} order for ${amount} DAE on TechFlow.io`);
     setTimeout(() => setTradeMessage(null), 3500);
   };
 
@@ -15,10 +15,10 @@ export default function TerminalTab() {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-white">Trading Terminal</h1>
-          <p className="text-sm text-gray-400">Order book execution for synthetic Site Shares performance contracts.</p>
+          <p className="text-sm text-gray-400">Order book execution for synthetic DAE Attention Shares performance contracts.</p>
         </div>
         <span className="text-xs font-mono text-[#00F0FF] px-3 py-1 bg-[#00F0FF]/10 rounded-full border border-[#00F0FF]/30">
-          TECHFLOW / SITE
+          TECHFLOW / DAE
         </span>
       </div>
 
@@ -57,7 +57,7 @@ export default function TerminalTab() {
         <div className="lg:col-span-4 bg-[#0E131F] rounded-2xl p-6 border border-white/10 space-y-5">
           <div className="text-xs font-mono text-gray-400 uppercase">Place Trade Order</div>
           <div className="space-y-2 text-xs font-mono">
-            <label className="text-gray-300">Amount ($SITE)</label>
+            <label className="text-gray-300">Amount ($DAE)</label>
             <input
               type="text"
               value={amount}

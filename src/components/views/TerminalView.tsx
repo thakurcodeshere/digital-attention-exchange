@@ -10,7 +10,7 @@ export const TerminalView: React.FC = () => {
       {/* Pair Header Bar */}
       <div className="terminal-header-bar">
         <div className="pair-info">
-          <div className="pair-title">$SITE / USDC</div>
+          <div className="pair-title">$DAE / USDC</div>
           <div className="pair-price">$4.8250 <span className="price-up">+8.42%</span></div>
         </div>
         <div className="pair-stats">
@@ -24,7 +24,7 @@ export const TerminalView: React.FC = () => {
           </div>
           <div className="pair-stat">
             <span className="stat-label">24h Volume</span>
-            <span className="stat-val">3,892,100 $SITE</span>
+            <span className="stat-val">3,892,100 $DAE</span>
           </div>
           <div className="pair-stat">
             <span className="stat-label">Attention Liquidity</span>
@@ -74,7 +74,7 @@ export const TerminalView: React.FC = () => {
           <div className="orderbook-table">
             <div className="ob-header">
               <span>Price (USDC)</span>
-              <span>Size ($SITE)</span>
+              <span>Size ($DAE)</span>
               <span>Total</span>
             </div>
             {/* Asks (Sell) */}
@@ -101,13 +101,13 @@ export const TerminalView: React.FC = () => {
                 className={`trade-tab buy ${tradeType === 'buy' ? 'active' : ''}`}
                 onClick={() => setTradeType('buy')}
               >
-                Buy $SITE
+                Buy $DAE
               </button>
               <button 
                 className={`trade-tab sell ${tradeType === 'sell' ? 'active' : ''}`}
                 onClick={() => setTradeType('sell')}
               >
-                Sell $SITE
+                Sell $DAE
               </button>
             </div>
           </div>
@@ -126,7 +126,7 @@ export const TerminalView: React.FC = () => {
             </div>
 
             <div className="form-group">
-              <label>Amount ($SITE)</label>
+              <label>Amount ($DAE)</label>
               <input type="number" className="form-control" placeholder="0.00" />
             </div>
 

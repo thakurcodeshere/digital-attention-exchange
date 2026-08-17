@@ -3,8 +3,8 @@ import { Vote } from 'lucide-react';
 
 export default function GovernanceTab() {
   const proposals = [
-    { id: 'SIP-14', title: 'Increase Retention Gravity Weight from 20% to 22%', status: 'PASSED', votes: '4.8M SITE' },
-    { id: 'SIP-15', title: 'Add Substack Newsletter Telemetry Module to Mainnet', status: 'VOTING NOW', votes: '2.1M SITE' }
+    { id: 'DAE-14', title: 'Increase Retention Gravity Weight from 20% to 22%', status: 'PASSED', votes: '4.8M DAE' },
+    { id: 'DAE-15', title: 'Add Substack Newsletter Telemetry Module to Mainnet', status: 'VOTING NOW', votes: '2.1M DAE' }
   ];
 
   return (

@@ -45,11 +45,11 @@ export const ExtensionView: React.FC = () => {
       <div className="section-grid-2">
         <div className="content-box">
           <div className="box-header">
-            <h3><Globe className="inline-icon text-cyan" /> SITE Attention Extension for Browsers</h3>
+            <h3><Globe className="inline-icon text-cyan" /> DAE Attention Extension for Browsers</h3>
           </div>
           <div className="extension-hero-body">
             <p>
-              The SITE Browser Extension seamlessly transforms your daily web surfing into passive attention rewards. Your attention proofs are encrypted locally using Zero-Knowledge SNARKs before submitting to the protocol.
+              The DAE Browser Extension seamlessly transforms your daily web surfing into passive attention rewards. Your attention proofs are encrypted locally using Zero-Knowledge SNARKs before submitting to the protocol.
             </p>
             <div className="browser-download-grid">
               <div className="browser-card">
@@ -99,7 +99,7 @@ export const ExtensionView: React.FC = () => {
               <Check className="check-icon text-emerald" />
               <div>
                 <strong>Instant Reward Settlement</strong>
-                <p>Earned $SITE tokens land directly in your connected Web3 wallet upon completing attention quotas.</p>
+                <p>Earned $DAE tokens land directly in your connected Web3 wallet upon completing attention quotas.</p>
               </div>
             </li>
           </ul>

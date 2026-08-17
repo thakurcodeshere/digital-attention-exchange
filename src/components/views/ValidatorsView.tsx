@@ -16,7 +16,7 @@ export const ValidatorsView: React.FC = () => {
 
         <div className="metric-card">
           <div className="metric-header">
-            <span className="metric-title">Total Staked $SITE</span>
+            <span className="metric-title">Total Staked $DAE</span>
             <Lock size={18} className="metric-icon text-indigo" />
           </div>
           <div className="metric-value">48,290,000</div>
@@ -52,7 +52,7 @@ export const ValidatorsView: React.FC = () => {
             <thead>
               <tr>
                 <th>Validator Node</th>
-                <th>Total Stake ($SITE)</th>
+                <th>Total Stake ($DAE)</th>
                 <th>Commission</th>
                 <th>Blocks Signed (30d)</th>
                 <th>Uptime</th>
@@ -65,7 +65,7 @@ export const ValidatorsView: React.FC = () => {
                   <div className="table-cell-title">Sentinel-Val-01 (Apex Security)</div>
                   <div className="table-cell-sub">0x892a...14f2</div>
                 </td>
-                <td>4,250,000 $SITE</td>
+                <td>4,250,000 $DAE</td>
                 <td>2.5%</td>
                 <td>489,120</td>
                 <td className="text-emerald">100.0%</td>
@@ -76,7 +76,7 @@ export const ValidatorsView: React.FC = () => {
                   <div className="table-cell-title">Coinbase Staking Infrastructure</div>
                   <div className="table-cell-sub">0x11a4...99c0</div>
                 </td>
-                <td>3,890,000 $SITE</td>
+                <td>3,890,000 $DAE</td>
                 <td>3.0%</td>
                 <td>472,900</td>
                 <td className="text-emerald">99.99%</td>
@@ -87,7 +87,7 @@ export const ValidatorsView: React.FC = () => {
                   <div className="table-cell-title">Paradigm Attention Node</div>
                   <div className="table-cell-sub">0x33e1...88a2</div>
                 </td>
-                <td>3,120,000 $SITE</td>
+                <td>3,120,000 $DAE</td>
                 <td>2.0%</td>
                 <td>441,800</td>
                 <td className="text-emerald">99.98%</td>
